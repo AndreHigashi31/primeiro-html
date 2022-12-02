@@ -13,19 +13,19 @@
     <main>
         <form>
             <label name="nomecompleto">Nome Completo</label>
-            <input type="text" id="nomecompleto">
+            <input type="text" id="nomecompleto" required>
 
             <label name="email">E-mail</label>
-            <input type="text" id="email">
+            <input type="email" id="email" required placeholder="seu e-mail@dominio.com">
 
             <label name="telefone">Telefone</label>
-            <input type="text" id="telefone">
+            <input type="tel" id="telefone" required placeholder="(xx) xxxxx-xxxx">
 
             <label name="perfil">Fale um pouco sobre sua experiência com Investimentos (opcional)</label>
             <textarea cols="70" rows="10" id="perfil"></textarea>
             
-            <div>
-                <p>Como prefere receber o contato para agendamento?</p>
+            <fieldset>
+                <legend>Como prefere receber o contato para agendamento?</legend>
                 <label for="radio-email">Email</label>
                 <input type="radio" value="email" id="radio-email">
 
@@ -34,21 +34,56 @@
 
                 <label for="radio-whatsapp">WhatsApp</label>
                 <input type="radio" value="whatsapp" id="radio-whatsapp">
-            </div>
+            </fieldset>
 
-            <div>
-                <p>Qual o melhor horário para fazermos uma reunião ?</p>
+            <fieldset>
+                <legend>Qual o melhor horário para fazermos uma reunião ?</legend>
                 <select>
                     <option>Manhã</option>
                     <option>Tarde</option>
                 </select>
-            </div>
+            </fieldset>
 
-            <label><input type="checkbox"> Gostaria de receber nossas novidades por e-mail?</label>
+            <label><input type="checkbox" checked> Gostaria de receber nossas novidades por e-mail?</label>
 
 
             <input type="submit" value="Enviar Formulário">
         </form>
+        <p>Horário para agendamento:</p>
+        <table>
+            <thead>
+                <th>Dia</th>
+                <th>Manhã</th>
+                <th>Tarde</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Segunda-feira</td>
+                    <td>9h ~ 11h</td>
+                    <td>13h ~ 17h</td>
+                </tr>
+                <tr>
+                    <td>Terça-feira</td>
+                    <td>8h ~ 11h</td>
+                    <td>13h ~ 17h</td>
+                </tr>
+                <tr>
+                    <td>Quarta-feira</td>
+                    <td>9h ~ 11h</td>
+                    <td>13h ~ 17h</td>
+                </tr>
+                <tr>
+                    <td>Quinta-feira</td>
+                    <td>8h ~ 11h</td>
+                    <td>13h ~ 17h</td>
+                </tr>
+                <tr>
+                    <td>Sexta-feira</td>
+                    <td>9h ~ 11h</td>
+                    <td>13h ~ 17h</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
     <footer>
         <p class="copyright">&copy; Higashi Invest 2022</p>
